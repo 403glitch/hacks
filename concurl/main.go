@@ -81,9 +81,6 @@ func main() {
 
 				// include the command at the top of the output file
 				buf := &bytes.Buffer{}
-				buf.WriteString("cmd: curl ")
-				buf.WriteString(strings.Join(args, " "))
-				buf.WriteString("\n------\n\n")
 				buf.Write(out)
 
 				err = ioutil.WriteFile(p, buf.Bytes(), 0644)
